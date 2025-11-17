@@ -1,10 +1,9 @@
-'use client'; // Error components must be Client Components
+'use client';
 
 import { useEffect } from 'react';
 
 export default function Error({ error, reset }) {
   useEffect(() => {
-    // Log the error to an error reporting service
     console.error(error);
   }, [error]);
 
@@ -15,7 +14,6 @@ export default function Error({ error, reset }) {
       <button
         className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700"
         onClick={
-          // Attempt to rerender the route
           () => reset()
         }
       >
